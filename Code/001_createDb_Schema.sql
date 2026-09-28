@@ -98,6 +98,7 @@ END;
 GO
 
 
+
 /*====================================================================
     3. VERIFY DATABASE SCHEMAS
 ====================================================================*/
@@ -167,7 +168,7 @@ BEGIN
         grade                        NVARCHAR(10),
         mathematics_mark             DECIMAL(5,2),
         physical_science_mark        DECIMAL(5,2),
-        life_sciences_mark            DECIMAL(5,2),
+        life_sciences_mark           DECIMAL(5,2),
         english_home_language_mark   DECIMAL(5,2),
         life_orientation_mark        DECIMAL(5,2),
         information_technology_mark  DECIMAL(5,2),
@@ -241,7 +242,7 @@ BEGIN
         grade                        NVARCHAR(10),
         mathematics_mark             DECIMAL(5,2),
         physical_science_mark        DECIMAL(5,2),
-        life_sciences_mark            DECIMAL(5,2),
+        life_sciences_mark           DECIMAL(5,2),
         english_home_language_mark   DECIMAL(5,2),
         life_orientation_mark        DECIMAL(5,2),
         information_technology_mark  DECIMAL(5,2),
@@ -252,6 +253,9 @@ BEGIN
 
 END;
 GO
+
+
+
 
 
 /*--------------------------------------------------------------------
@@ -315,7 +319,7 @@ BEGIN
         grade                        NVARCHAR(10),
         mathematics_mark             DECIMAL(5,2),
         physical_science_mark        DECIMAL(5,2),
-        life_sciences_mark            DECIMAL(5,2),
+        life_sciences_mark           DECIMAL(5,2),
         english_home_language_mark   DECIMAL(5,2),
         life_orientation_mark        DECIMAL(5,2),
         information_technology_mark  DECIMAL(5,2),
@@ -391,7 +395,7 @@ USE edutech_dwh;
 GO
 
 -- Full refresh: remove existing Grade 10 Silver records.
-TRUNCATE TABLE silver.prelim_science_students_marks_g10;
+TRUNCATE TABLE edutech_dwh.silver.prelim_science_students_marks_g10;
 GO
 
 
@@ -473,7 +477,7 @@ GO
 --------------------------------------------------------------------*/
 
 -- Full refresh: remove existing Grade 11 Silver records.
-TRUNCATE TABLE silver.prelim_science_students_marks_g11;
+TRUNCATE TABLE edutech_dwh.silver.prelim_science_students_marks_g11;
 GO
 
 
@@ -495,7 +499,7 @@ BEGIN
         grade                        NVARCHAR(10),
         mathematics_mark             DECIMAL(5,2),
         physical_science_mark        DECIMAL(5,2),
-        life_sciences_mark            DECIMAL(5,2),
+        life_sciences_mark           DECIMAL(5,2),
         english_home_language_mark   DECIMAL(5,2),
         life_orientation_mark        DECIMAL(5,2),
         information_technology_mark  DECIMAL(5,2),
@@ -551,8 +555,9 @@ GO
     5.3 GRADE 12 SILVER TABLE
 --------------------------------------------------------------------*/
 
+
 -- Full refresh: remove existing Grade 12 Silver records.
-TRUNCATE TABLE silver.prelim_science_students_marks_g12;
+TRUNCATE TABLE edutech_dwh.silver.prelim_science_students_marks_g12;
 GO
 
 
@@ -661,3 +666,4 @@ GO
 SELECT *
 FROM silver.prelim_science_students_marks_g12;
 GO
+
